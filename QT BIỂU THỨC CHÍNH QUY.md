@@ -31,31 +31,22 @@ Chúng ta đi xem xét các chuổi sau:
 Chuổi này hợp lệ với chuổi mẫu vì chứa chuỗi abc
 `abdefgh123`
 Chuổi này thì không đúng với chuỗi mẫu vì không chứa chuỗi abc
-### Bài 2: Biểu diễn miền giá trị mẫu trong biểu<!-- {"fold":true} -->
-thức chính quy
-Ở bài trước chúng ta đã hiểu qua biểu thức chính quy là gì và thông
-qua một số ví dụ đơn giản cũng đã hiểu sơ qua về ý nghĩa hoạt động
+### Bài 2: Biểu diễn miền giá trị mẫu trong biểu thức chính quy
+<!-- {"fold":true} -->
+Ở bài trước chúng ta đã hiểu qua biểu thức chính quy là gì và thông qua một số ví dụ đơn giản cũng đã hiểu sơ qua về ý nghĩa hoạt động
 của nó.
-Tuy nhiên trên thực tế tập dữ liệu mẫu nó vô cùng đa dạng và phức
-tạp.
-Ví dụ yêu cầu của chúng ta cần một mẫu kiểm tra một trường nhập
-vào là các chữ số nằm trong tập hợp {1,2,..9} chúng ta không thể sử
+Tuy nhiên trên thực tế tập dữ liệu mẫu nó vô cùng đa dạng và phứctạp.
+Ví dụ yêu cầu của chúng ta cần một mẫu kiểm tra một trường nhập vào là các chữ số nằm trong tập hợp {1,2,..9} chúng ta không thể sử
 dụng cách thông thường là liệu kê tất cả ra và so sánh được.
-Hôm nay thông qua một số cú pháp trong biểu thức chính quy thì
-công việc chúng ta sẽ nhẹ nhàng hơn rất nhiều
+Hôm nay thông qua một số cú pháp trong biểu thức chính quy thì công việc chúng ta sẽ nhẹ nhàng hơn rất nhiều
 Dấu ngoặc vuông […] trong biểu thức chính quy
 Khi sử dụng dấu ngoặc vuông này biểu thức chính quy biểu thị
-chuỗi mẫu cho phép chuổi so sánh chưa 1 ký tự bất trì trong các ký
-tự nằm ở biên trong.
-Ví dụ sau biểu diễn chuỗi mẫu chứa các ký tự abc
+chuỗi mẫu cho phép chuổi so sánh chưa 1 ký tự bất trì trong các ký tự nằm ở biên trong Ví dụ sau biểu diễn chuỗi mẫu chứa các ký tự abc
 `/[abc]/`
-Khi đấy các chuỗi : a, ad, abc có định dạng trùng với chuỗi mẫu vì nó
-tồn tại ít nhất 1 ký tự có chứa 1 trong 3 ký tự trong tập hợp các ký tự
+Khi đấy các chuỗi : a, ad, abc có định dạng trùng với chuỗi mẫu vì nó tồn tại ít nhất 1 ký tự có chứa 1 trong 3 ký tự trong tập hợp các ký tự
  `{a,b,c}`
-Rõ ràng hơn, với chuổi mẫu như trên biểu diễn cho một ký tự bất kỳ
-của chuổi có nằm trong tập hợp các ký tự trong nằm trong dấu
-ngoặc []
-Tiếp theo, một chuỗi có ký tự chứa một trong các chữ số 1,2,3 được
+Rõ ràng hơn, với chuổi mẫu như trên biểu diễn cho một ký tự bất kỳ của chuổi có nằm trong tập hợp các ký tự trong nằm trong dấu
+ngoặc [] Tiếp theo, một chuỗi có ký tự chứa một trong các chữ số 1,2,3 được
 biểu diễn dưới dạng biểu thức chính quy như sau.
 `/[123]/`
 Với lập luận như trên ta có các chuổi sau đúng theo chuỗi mẫu mà
@@ -63,13 +54,10 @@ chúng ta biểu diễn: `1abc, 345cd`
 Và các chuỗi sau không đúng định dạng: abc456, cd357
 Rồi, chắc đến đây các bạn cũng đã hiểu qua phần nào về cách làm
 việc của biểu thức chính quy rồi. Chúng ta đi tiếp qua luật tiếp theo.
-Dấu gạch ngang (-) trong ngoặc vuông ([…]) ở biểu
-thức chính quy
+Dấu gạch ngang (-) trong ngoặc vuông ([…]) ở biểu thức chính quy
 Ở phần trước khi chúng biểu diễn tập hợp các ký tự liên tục hay
-không chúng ta cũng liên kê ra, tuy nhiên làm như thế nó rất mất thời
-gian.
-Với dấu gạch ngang sẽ cho phép chúng ta tiết kiệm thời gian khi nó
-tự động tạo cho chúng ta một dãy các ký tự liên tục (Gồm các chữ
+không chúng ta cũng liên kê ra, tuy nhiên làm như thế nó rất mất thời gian.
+Với dấu gạch ngang sẽ cho phép chúng ta tiết kiệm thời gian khi nó tự động tạo cho chúng ta một dãy các ký tự liên tục (Gồm các chữ
 cái và chữ số)
 Ví dụ sau biểu thị chuỗi mẫu yêu cầu chứa một trong các ký tự từ 0-9
 `/[0-9]/`
@@ -123,15 +111,13 @@ nhiều lần lặp lại
 Ví dụ chuỗi mẫu sau là chuổi có hoặc không chứa ký tự a
 `/a*/`
 Với mấu trên các chuỗi sau trùng với biểu thức mẫu: cd, abc, aac
-Sử dụng ký tự +
-Với ký tự dấu cộng quy định ký tự hoặc tập ký tự phía trước nó được
+Sử dụng ký tự + Với ký tự dấu cộng quy định ký tự hoặc tập ký tự phía trước nó được
 lặp lại 1 hoặc nhiều lần
 Ví dụ biểu thức chính quy sau yêu cầu chúng ta nhập vào chuổi có ít
 nhất một ký tự a
 `/a+/`
 Ví dụ một số chuổi sau phù hợp với biểu thức trên: ab, aab
-Sử dụng ký tự ngoặc kép {}
-Với cú pháp này quy định việc gặp lại của một kỷ tự hoặc một tập ký
+Sử dụng ký tự ngoặc kép {} Với cú pháp này quy định việc gặp lại của một kỷ tự hoặc một tập ký
 tự mẫu
 1. {n} : Trùng khớp khi ký tự hoặc dãi ký tự đằng trước có chính xác n
 phần tử.
@@ -200,7 +186,7 @@ Sử dụng cặp ký tự ngặc nhọn giúp chúng ta có thể nhóm các ph
 của biểu thức mẫu tùy ý
 Ví dụ biểu thức chính quy sau đây mô tả đường linh thân thiện
 website
-====https://unitop.vn/course/html-css-21-ngay.html
+==https://unitop.vn/course/html-css-21-ngay.html
 Phần đầu chính là domain nên ở chúng ta cần mô tả cho chuỗi sau
 course/html-css-21-ngay.html
 Cấu trúc link

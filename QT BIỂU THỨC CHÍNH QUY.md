@@ -3,7 +3,7 @@
 ## Quy tắc Biểu Thức Chính Quy 
 
 
-~Regular Expression bạn cần biết~
+-Regular Expression bạn cần biết
 
 
 *Bạn đang học lập trình web? Bạn đang cần sử dụng biểu thức chính quy để validation dữ liệu nhưng chưa biết bắt đầu từ đâu? Yên tâm chuỗi bài bên dưới này tôi chia sẻ cho bạn từng bước. Biểu thức chính quy là phần hay nhưng khá trừu tượng, tôi đã mất khá nhiều thời gian để hiểu về nó và tôi hi vong rằng những nuội dung. bên dưới sẽ giúp ích cho bạn.*
